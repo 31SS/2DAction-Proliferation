@@ -1,16 +1,14 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class CoinController : MonoBehaviour
+public class CoinController : MonoBehaviour , IPickupable
 {
     public AudioClip getCoin;
-    void OnTriggerEnter2D(Collider2D other)
+
+    public void PickedUp(UnityChan2DController player)
     {
-        if (other.tag == "Player")
-        {
-            PointController.instance.AddCoin();
-            AudioSourceController.instance.PlayOneShot(getCoin);
-            Destroy(gameObject);
-        }
+        PointController.instance.AddCoin();
+        AudioSourceController.instance.PlayOneShot(getCoin);
+        Destroy(gameObject);
     }
 }

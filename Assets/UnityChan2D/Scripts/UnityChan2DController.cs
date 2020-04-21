@@ -9,6 +9,8 @@ public class UnityChan2DController : MonoBehaviour
 
     public LayerMask whatIsGround;
 
+    private PlayerInput _playerInput;
+    private PlayerMover _playerMover;
     private Animator m_animator;
     private BoxCollider2D m_boxcollier2D;
     private Rigidbody2D m_rigidbody2D;
@@ -32,7 +34,7 @@ public class UnityChan2DController : MonoBehaviour
 
         // Rigidbody2D
         m_rigidbody2D.gravityScale = 3.5f;
-        m_rigidbody2D.fixedAngle = true;
+        m_rigidbody2D.freezeRotation = true;
 
         // BoxCollider2D
         m_boxcollier2D.size = new Vector2(1, 2.5f);
@@ -44,6 +46,8 @@ public class UnityChan2DController : MonoBehaviour
 
     void Awake()
     {
+        _playerInput = new PlayerInput();
+        _playerMover = GetComponent<PlayerMover>();
         m_animator = GetComponent<Animator>();
         m_boxcollier2D = GetComponent<BoxCollider2D>();
         m_rigidbody2D = GetComponent<Rigidbody2D>();
@@ -51,45 +55,29 @@ public class UnityChan2DController : MonoBehaviour
 
     void Update()
     {
-        if (m_state != State.Damaged)
-        {
-            float x = Input.GetAxis("Horizontal");
-            bool jump = Input.GetButtonDown("Jump");
-            Move(x, jump);
-        }
-    }
-
-    void Move(float move, bool jump)
-    {
-        if (Mathf.Abs(move) > 0)
-        {
-            Quaternion rot = transform.rotation;
-            transform.rotation = Quaternion.Euler(rot.x, Mathf.Sign(move) == 1 ? 0 : 180, rot.z);
-        }
-
-        m_rigidbody2D.velocity = new Vector2(move * maxSpeed, m_rigidbody2D.velocity.y);
-
-        m_animator.SetFloat("Horizontal", move);
-        m_animator.SetFloat("Vertical", m_rigidbody2D.velocity.y);
-        m_animator.SetBool("isGround", m_isGround);
-
-        if (jump && m_isGround)
-        {
-            m_animator.SetTrigger("Jump");
-            SendMessage("Jump", SendMessageOptions.DontRequireReceiver);
-            m_rigidbody2D.AddForce(Vector2.up * jumpPower);
-        }
-    }
-
-    void FixedUpdate()
-    {
         Vector2 pos = transform.position;
         Vector2 groundCheck = new Vector2(pos.x, pos.y - (m_centerY * transform.localScale.y));
         Vector2 groundArea = new Vector2(m_boxcollier2D.size.x * 0.49f, 0.05f);
 
         m_isGround = Physics2D.OverlapArea(groundCheck + groundArea, groundCheck - groundArea, whatIsGround);
         m_animator.SetBool("isGround", m_isGround);
+
+        if (m_state != State.Damaged)
+        {
+            _playerInput.Inputting();
+            _playerMover.Move(_playerInput.X, _playerInput.Jump, m_isGround, m_animator);
+        }
     }
+
+    //void FixedUpdate()
+    //{
+    //    Vector2 pos = transform.position;
+    //    Vector2 groundCheck = new Vector2(pos.x, pos.y - (m_centerY * transform.localScale.y));
+    //    Vector2 groundArea = new Vector2(m_boxcollier2D.size.x * 0.49f, 0.05f);
+
+    //    m_isGround = Physics2D.OverlapArea(groundCheck + groundArea, groundCheck - groundArea, whatIsGround);
+    //    m_animator.SetBool("isGround", m_isGround);
+    //}
 
     void OnTriggerStay2D(Collider2D other)
     {
@@ -117,6 +105,14 @@ public class UnityChan2DController : MonoBehaviour
         }
         m_animator.SetTrigger("Invincible Mode");
         m_state = State.Invincible;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        var pickupable = other.GetComponent<IPickupable>();
+        if(pickupable != null){
+            pickupable.PickedUp(this);
+        }
     }
 
     void OnFinishedInvincibleMode()
