@@ -10,7 +10,7 @@ public class PlayerInput : IPlayerInput
     public void Inputting()
     {
         _x = Input.GetAxis("Horizontal");
-        _jump = Input.GetButton("Jump");
+        _jump = Input.GetButtonDown("Jump");
     }
 
     public float X

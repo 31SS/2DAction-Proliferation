@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1115422033316483193}
   - component: {fileID: 1400121869992184912}
   - component: {fileID: 5623336192896527652}
+  - component: {fileID: 107658190137423402}
   m_Layer: 9
   m_Name: CopynityChan2D
   m_TagString: Player
@@ -301,3 +302,15 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 91c291b784ff846febdd7e04e295f4fa, type: 3}
   clearVoice: {fileID: 8300000, guid: 752f3604d760a4929a1a81d203125e4f, type: 3}
   timeOverVoice: {fileID: 8300000, guid: 431f7b07d1e854f14860c28585f9b9d4, type: 3}
+--- !u!114 &107658190137423402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5623336192903583942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d67d7012ed6efec4fb66fc7858944be0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

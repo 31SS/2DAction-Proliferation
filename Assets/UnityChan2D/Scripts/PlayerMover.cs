@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMover : MonoBehaviour
 {
@@ -31,10 +29,14 @@ public class PlayerMover : MonoBehaviour
 
         if (jump && m_isGround)
         {
-            m_animator.SetTrigger("Jump");
-            SendMessage("Jump", SendMessageOptions.DontRequireReceiver);
-            m_rigidbody2D.AddForce(Vector2.up * jumpPower);
-            Debug.Log("hoge");
+            Jumpping(m_animator);
         }
+    }
+    public void Jumpping(Animator Ani)
+    {
+        Ani.SetTrigger("Jump");
+        SendMessage("Jump",SendMessageOptions.DontRequireReceiver);
+        m_rigidbody2D.AddForce(Vector2.up * jumpPower);
+        Debug.Log("hoge");
     }
 }

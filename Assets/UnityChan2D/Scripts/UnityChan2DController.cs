@@ -55,13 +55,6 @@ public class UnityChan2DController : MonoBehaviour
 
     void Update()
     {
-        Vector2 pos = transform.position;
-        Vector2 groundCheck = new Vector2(pos.x, pos.y - (m_centerY * transform.localScale.y));
-        Vector2 groundArea = new Vector2(m_boxcollier2D.size.x * 0.49f, 0.05f);
-
-        m_isGround = Physics2D.OverlapArea(groundCheck + groundArea, groundCheck - groundArea, whatIsGround);
-        m_animator.SetBool("isGround", m_isGround);
-
         if (m_state != State.Damaged)
         {
             _playerInput.Inputting();
@@ -69,15 +62,15 @@ public class UnityChan2DController : MonoBehaviour
         }
     }
 
-    //void FixedUpdate()
-    //{
-    //    Vector2 pos = transform.position;
-    //    Vector2 groundCheck = new Vector2(pos.x, pos.y - (m_centerY * transform.localScale.y));
-    //    Vector2 groundArea = new Vector2(m_boxcollier2D.size.x * 0.49f, 0.05f);
+    void FixedUpdate()
+    {
+        Vector2 pos = transform.position;
+        Vector2 groundCheck = new Vector2(pos.x, pos.y - (m_centerY * transform.localScale.y));
+        Vector2 groundArea = new Vector2(m_boxcollier2D.size.x * 0.49f, 0.05f);
 
-    //    m_isGround = Physics2D.OverlapArea(groundCheck + groundArea, groundCheck - groundArea, whatIsGround);
-    //    m_animator.SetBool("isGround", m_isGround);
-    //}
+        m_isGround = Physics2D.OverlapArea(groundCheck + groundArea, groundCheck - groundArea, whatIsGround);
+        m_animator.SetBool("isGround", m_isGround);
+    }
 
     void OnTriggerStay2D(Collider2D other)
     {
@@ -125,5 +118,11 @@ public class UnityChan2DController : MonoBehaviour
         Normal,
         Damaged,
         Invincible,
+    }
+
+    public Animator M_Animator
+    {
+        get { return m_animator; }
+        private set { m_animator = value; }
     }
 }
