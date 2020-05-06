@@ -27,7 +27,7 @@ public class UnityChan2DController : MonoBehaviour
         maxSpeed = 10f;
         jumpPower = 1000;
         backwardForce = new Vector2(-4.5f, 5.4f);
-        whatIsGround = 1 << LayerMask.NameToLayer("Ground");
+        whatIsGround = 1 << LayerMask.NameToLayer("Solid") | 1 << LayerMask.NameToLayer("ThornBlock");
 
         // Transform
         transform.localScale = new Vector3(1, 1, 1);
@@ -81,6 +81,15 @@ public class UnityChan2DController : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "DamageObject" && m_state == State.Normal)
+        {
+            m_state = State.Damaged;
+            StartCoroutine(INTERNAL_OnDamage());
+        }
+    }
+
     IEnumerator INTERNAL_OnDamage()
     {
         m_animator.Play(m_isGround ? "Damage" : "AirDamage");
@@ -102,6 +111,11 @@ public class UnityChan2DController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        var eventBlock = other.GetComponent<IEventBlock>();
+        if (eventBlock != null)
+        {
+            eventBlock.HappenEvent(this);
+        }
         var pickupable = other.GetComponent<IPickupable>();
         if(pickupable != null){
             pickupable.PickedUp(this);

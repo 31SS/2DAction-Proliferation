@@ -269,7 +269,7 @@ MonoBehaviour:
   backwardForce: {x: -4.5, y: 5.4}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
 --- !u!114 &1400121869992184912
 MonoBehaviour:
   m_ObjectHideFlags: 0

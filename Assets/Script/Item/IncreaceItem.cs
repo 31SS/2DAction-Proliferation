@@ -6,12 +6,12 @@ public class IncreaceItem : MonoBehaviour, IPickupable {
     public void PickedUp(UnityChan2DController player)
     {
         GetComponent<Collider2D>().enabled = false;
+        gameObject.SetActive(false);
         Invoke("Increace", 0.5f);
     }
 
     private void Increace()
     {
         Instantiate(originPlayer, transform.position, Quaternion.identity);
-        gameObject.SetActive(false);
     }
 }

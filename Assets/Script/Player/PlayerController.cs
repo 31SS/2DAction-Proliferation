@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour
     //着地判定
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Ground")
+        if (col.gameObject.tag == "Solid" | col.gameObject.tag == "ThornBlock")
         {
             if (!isGround)
                 isGround = true;
@@ -169,7 +169,7 @@ public class PlayerController : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Ground")
+        if (col.gameObject.tag == "Solid" | col.gameObject.tag == "ThornBlock")
         {
             if (!isGround)
                 isGround = true;
