@@ -1,20 +1,24 @@
 ﻿using System.Collections;
 using UnityEngine;
 [RequireComponent(typeof(Animator), typeof(Rigidbody2D), typeof(BoxCollider2D))]
+//Playerの動作を統括するスクリプト
 public class UnityChan2DController : MonoBehaviour
 {
-    public float maxSpeed = 10f;
-    public float jumpPower = 1000f;
+    [SerializeField] private float maxSpeed = 10f;
+    [SerializeField] private float jumpPower = 100f;
     public Vector2 backwardForce = new Vector2(-4.5f, 5.4f);
 
     public LayerMask whatIsGround;
+    public LayerMask whatIsBomb;
 
     private PlayerInput _playerInput;
     private PlayerMover _playerMover;
     private Animator m_animator;
     private BoxCollider2D m_boxcollier2D;
-    private Rigidbody2D m_rigidbody2D;
+    [SerializeField]private Rigidbody2D m_rigidbody2D;
     private bool m_isGround;
+    private bool m_isBomb;
+    private bool m_jumpFlag;
     private const float m_centerY = 1.5f;
 
     private State m_state = State.Normal;
@@ -27,7 +31,8 @@ public class UnityChan2DController : MonoBehaviour
         maxSpeed = 10f;
         jumpPower = 1000;
         backwardForce = new Vector2(-4.5f, 5.4f);
-        whatIsGround = 1 << LayerMask.NameToLayer("Solid") | 1 << LayerMask.NameToLayer("ThornBlock");
+        whatIsGround = 1 << LayerMask.NameToLayer("Standable");
+        whatIsBomb = 1 << LayerMask.NameToLayer("Bomb");
 
         // Transform
         transform.localScale = new Vector3(1, 1, 1);
@@ -46,11 +51,11 @@ public class UnityChan2DController : MonoBehaviour
 
     void Awake()
     {
-        _playerInput = new PlayerInput();
-        _playerMover = GetComponent<PlayerMover>();
         m_animator = GetComponent<Animator>();
         m_boxcollier2D = GetComponent<BoxCollider2D>();
         m_rigidbody2D = GetComponent<Rigidbody2D>();
+        _playerInput = new PlayerInput();
+        _playerMover = new PlayerMover(m_rigidbody2D);
     }
 
     void Update()
@@ -58,10 +63,25 @@ public class UnityChan2DController : MonoBehaviour
         if (m_state != State.Damaged)
         {
             _playerInput.Inputting();
-            _playerMover.Move(_playerInput.X, _playerInput.Jump, m_isGround, m_animator);
+            //左右の向き
+            if (Mathf.Abs(_playerInput.X) > 0)
+            {
+                Quaternion rot = transform.rotation;
+                transform.rotation = Quaternion.Euler(rot.x, Mathf.Sign(_playerInput.X) == 1 ? 0 : 180, rot.z);
+            }
+            _playerMover.Move(maxSpeed, _playerInput.X, m_isGround, m_animator);
+            if ((_playerInput.Jump && m_isGround) || m_jumpFlag)//Bombを踏んだ時かSpaceキーを押したときにジャンプ
+            {
+                _playerMover.Jump(m_animator, jumpPower);
+                if (m_jumpFlag)
+                {
+                    m_jumpFlag = false;
+                }
+            }
         }
     }
 
+    //地面に立っているか判別する処理
     void FixedUpdate()
     {
         Vector2 pos = transform.position;
@@ -72,6 +92,22 @@ public class UnityChan2DController : MonoBehaviour
         m_animator.SetBool("isGround", m_isGround);
     }
 
+    //SoilBlockや拾えるアイテムに触れた時の処理
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        var breakableBlock = other.GetComponent<IBreakable>();
+        if (breakableBlock != null)
+        {
+            breakableBlock.Breaked();
+        }
+        var pickupable = other.GetComponent<IPickupable>();
+        if (pickupable != null)
+        {
+            pickupable.PickedUp(this);
+        }
+    }
+
+    //ダメージを受けるオブジェクト(HierarchyのSpikeHead)に触れた時
     void OnTriggerStay2D(Collider2D other)
     {
         if (other.tag == "DamageObject" && m_state == State.Normal)
@@ -81,12 +117,26 @@ public class UnityChan2DController : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D other)
+    //踏めるオブジェクト(Bomb)に上から触れた時
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "DamageObject" && m_state == State.Normal)
+        var stepedOnable = other.gameObject.GetComponent<ISteponable>();
+        Vector2 pos = transform.position;
+        Vector2 bombCheck = new Vector2(pos.x, pos.y - (m_centerY * transform.localScale.y));
+        Vector2 bombArea = new Vector2(m_boxcollier2D.size.x * 0.48f, 0.05f);
+        m_isBomb = Physics2D.OverlapArea(bombCheck + bombArea, bombCheck - bombArea, whatIsBomb);
+        if (stepedOnable != null && m_isBomb && m_rigidbody2D.velocity.y <= 0f)
         {
-            m_state = State.Damaged;
-            StartCoroutine(INTERNAL_OnDamage());
+            if (Input.GetButton("Jump"))
+            {
+                M_JumpFlag = true;
+                SendMessage("Jump", SendMessageOptions.DontRequireReceiver);
+            }
+            else
+            {
+                _playerMover.Jump(m_animator, jumpPower);
+            }
+            stepedOnable.StepedOn(this);
         }
     }
 
@@ -109,19 +159,6 @@ public class UnityChan2DController : MonoBehaviour
         m_state = State.Invincible;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        var eventBlock = other.GetComponent<IEventBlock>();
-        if (eventBlock != null)
-        {
-            eventBlock.HappenEvent(this);
-        }
-        var pickupable = other.GetComponent<IPickupable>();
-        if(pickupable != null){
-            pickupable.PickedUp(this);
-        }
-    }
-
     void OnFinishedInvincibleMode()
     {
         m_state = State.Normal;
@@ -138,5 +175,11 @@ public class UnityChan2DController : MonoBehaviour
     {
         get { return m_animator; }
         private set { m_animator = value; }
+    }
+
+    public bool M_JumpFlag
+    {
+        get { return m_jumpFlag; }
+        set { m_jumpFlag = value; }
     }
 }

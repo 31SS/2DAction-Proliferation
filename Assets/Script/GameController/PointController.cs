@@ -32,4 +32,9 @@ public class PointController : MonoBehaviour
     {
         total.text = (Convert.ToInt32(total.text) + 5).ToString("0000000");
     }
+
+    public void AddBomb()
+    {
+        total.text = (Convert.ToInt32(total.text) + 10).ToString("0000000");
+    }
 }

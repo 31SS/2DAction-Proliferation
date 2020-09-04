@@ -30,7 +30,7 @@ public class BlockController : MonoBehaviour
             {
                 if (canBreak)
                 {
-                    GameObject broken = (GameObject) Instantiate(brokenBlock, transform.position, transform.rotation);
+                    GameObject broken = Instantiate(brokenBlock, transform.position, transform.rotation);
                     broken.transform.localScale = transform.lossyScale;
                     Destroy(gameObject);
                 }

@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class SoilBlock : MonoBehaviour, IEventBlock
+﻿using UnityEngine;
+//PlayerかBombの爆発に触れれば消滅するBlock
+public class SoilBlock : MonoBehaviour, IBreakable
 {
     public AudioClip breakBlock;
 
-    public void HappenEvent(UnityChan2DController player)
+    public void Breaked()
     {
         PointController.instance.AddSoil();
         AudioSourceController.instance.PlayOneShot(breakBlock);

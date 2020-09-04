@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
+//キーボードからのPlayerの入力処理
 public class PlayerInput : IPlayerInput
 {
     [SerializeField]private float _x;

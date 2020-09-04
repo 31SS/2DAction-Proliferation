@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+//拾うとPlayerを増やせるアイテムの処理
 public class IncreaceItem : MonoBehaviour, IPickupable {
 
     public GameObject originPlayer;

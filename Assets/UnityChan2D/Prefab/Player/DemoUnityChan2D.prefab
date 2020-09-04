@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6100000}
   - component: {fileID: 8200000}
   - component: {fileID: 4715510791282167327}
-  - component: {fileID: 6729540119050572342}
   - component: {fileID: 11400002}
   m_Layer: 9
   m_Name: DemoUnityChan2D
@@ -269,20 +268,10 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &6729540119050572342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16af02ba096dfaa4982c310e08cc9104, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 10
-  jumpPower: 1000
+  whatIsBomb:
+    serializedVersion: 2
+    m_Bits: 0
+  m_rigidbody2D: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 0
