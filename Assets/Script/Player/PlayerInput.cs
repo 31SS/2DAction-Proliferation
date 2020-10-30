@@ -14,12 +14,12 @@ public class PlayerInput : IPlayerInput
     public float X
     {
         get { return this._x; }
-        private set { this._x = value; }
+        set { this._x = value; }
     }
 
     public bool Jump
     {
         get { return this._jump; }
-        private set { this._jump = value; }
+        set { this._jump = value; }
     }
 }

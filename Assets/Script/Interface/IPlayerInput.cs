@@ -2,5 +2,15 @@
 //現在はキーボードのみ対応
 public interface IPlayerInput
 {
-    void Inputting();    
+    void Inputting();
+
+    float X
+    {
+        get; set;
+    }
+
+    bool Jump
+    {
+        get; set;
+    }
 }

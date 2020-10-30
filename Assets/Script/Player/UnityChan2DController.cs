@@ -60,6 +60,9 @@ public class UnityChan2DController : MonoBehaviour
 
     void Update()
     {
+
+        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //Debug.DrawRay(ray.origin, ray.direction * distance, Color.red, duration, false);
         if (m_state != State.Damaged)
         {
             _playerInput.Inputting();
