@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 //Playerに踏まれた際の処理とAnimationの遷移状態によってBombを起爆させる処理
 public class BombController : MonoBehaviour, ISteponable
 {

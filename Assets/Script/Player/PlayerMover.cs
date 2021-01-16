@@ -9,9 +9,9 @@ public class PlayerMover
         m_rigidbody2D = rigidbody2D;
     }
 
-    public void Move(float maxSpeed,float move, bool m_isGround, Animator m_animator)
+    public void Move(int reverseFlag,float maxSpeed,float move, bool m_isGround, Animator m_animator)
     {
-        m_rigidbody2D.velocity = new Vector2(move * maxSpeed, m_rigidbody2D.velocity.y);
+        m_rigidbody2D.velocity = new Vector2(reverseFlag * move * maxSpeed, m_rigidbody2D.velocity.y);
         m_animator.SetFloat("Horizontal", move);
         m_animator.SetFloat("Vertical", m_rigidbody2D.velocity.y);
         m_animator.SetBool("isGround", m_isGround);

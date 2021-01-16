@@ -72,7 +72,7 @@ public class UnityChan2DController : MonoBehaviour
                 Quaternion rot = transform.rotation;
                 transform.rotation = Quaternion.Euler(rot.x, Mathf.Sign(_playerInput.X) == 1 ? 0 : 180, rot.z);
             }
-            _playerMover.Move(maxSpeed, _playerInput.X, m_isGround, m_animator);
+            _playerMover.Move(1, maxSpeed, _playerInput.X, m_isGround, m_animator);
             if ((_playerInput.Jump && m_isGround) || m_jumpFlag)//Bombを踏んだ時かSpaceキーを押したときにジャンプ
             {
                 _playerMover.Jump(m_animator, jumpPower);

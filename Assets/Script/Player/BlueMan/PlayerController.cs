@@ -4,33 +4,33 @@ using UnityEngine;
 using CharacterState;
 using UniRx;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : BaseCharacter
 {
-    //変更前のステート名
-    private string _prevStateName;
-
-    //ステート
-    public StateProcessor StateProcessor { get; set; } = new StateProcessor();
-    public CharacterStateIdle StateIdle { get; set; } = new CharacterStateIdle();
-    public CharacterStateRun StateRun { get; set; } = new CharacterStateRun();
-    public CharacterStateAir StateAir { get; set; } = new CharacterStateAir();
-    public CharacterStateAttack StateAttack { get; set; } = new CharacterStateAttack();
-
-
-    [SerializeField] private static readonly float RUN_SPEED = 10f;
-    [SerializeField] private static readonly float JUMP_POWER = 200f;
-    private static readonly float FloatingDistance = 0.01f;
-
-    private PlayerInput _playerInput;
-    private PlayerMover _playerMover;
-    [SerializeField] private Rigidbody2D m_rigidbody2D;
-    [SerializeField] private Animator m_animator;
-    [SerializeField] private bool m_isGround/* { get; set; }*/;
-    [SerializeField] private BoxCollider2D m_boxCollider2D;
-    [SerializeField] private LayerMask _layerMask;
-    [SerializeField] private SpriteRenderer _spriteRenderer;
-    [SerializeField] private ContactFilter2D _filter2D;
-    private RaycastHit2D _hit;
+    // //変更前のステート名
+    // private string _prevStateName;
+    //
+    // //ステート
+    // public StateProcessor StateProcessor { get; set; } = new StateProcessor();
+    // public CharacterStateIdle StateIdle { get; set; } = new CharacterStateIdle();
+    // public CharacterStateRun StateRun { get; set; } = new CharacterStateRun();
+    // public CharacterStateAir StateAir { get; set; } = new CharacterStateAir();
+    // public CharacterStateAttack StateAttack { get; set; } = new CharacterStateAttack();
+    //
+    //
+    // [SerializeField] private static readonly float RUN_SPEED = 10f;
+    // [SerializeField] private static readonly float JUMP_POWER = 200f;
+    // private static readonly float FloatingDistance = 0.01f;
+    //
+    // private PlayerInput _playerInput;
+    // private PlayerMover _playerMover;
+    // [SerializeField] private Rigidbody2D m_rigidbody2D;
+    // [SerializeField] private Animator m_animator;
+    // [SerializeField] private bool m_isGround/* { get; set; }*/;
+    // [SerializeField] private BoxCollider2D m_boxCollider2D;
+    // [SerializeField] private LayerMask _layerMask;
+    // [SerializeField] private SpriteRenderer _spriteRenderer;
+    // [SerializeField] private ContactFilter2D _filter2D;
+    // private RaycastHit2D _hit;
     
 
     private void Awake()
@@ -85,14 +85,14 @@ public class PlayerController : MonoBehaviour
         ////Debug.Log(m_isGround.ToString());
 
         m_isGround = m_rigidbody2D.IsTouching(_filter2D);
-        Debug.Log(m_isGround.ToString());
+        // Debug.Log(m_isGround.ToString());
 
-        _playerMover.Move(RUN_SPEED, _playerInput.X, m_isGround, m_animator);
+        _playerMover.Move(NON_REVERSE, playerParameter.RUN_SPEED, _playerInput.X, m_isGround, m_animator);
         if (m_isGround)
         {
             if (_playerInput.Jump == true)
             {
-                _playerMover.Jump(m_animator, JUMP_POWER);
+                _playerMover.Jump(m_animator, playerParameter.JUMP_POWER);
                 StateProcessor.State.Value = StateAir;
                 Debug.Log("Jump");
                 //return;
@@ -145,21 +145,21 @@ public class PlayerController : MonoBehaviour
         //}
     }
 
-    public void Idle()
-    {
-
-    }
-    public void Run()
-    {
-        
-    }
-    public void Air()
-    {
-        //_playerMover.Jump(m_animator, JUMP_POWER);
-    }
-
-    public void Attack()
-    {
-
-    }
+    // public void Idle()
+    // {
+    //
+    // }
+    // public void Run()
+    // {
+    //     
+    // }
+    // public void Air()
+    // {
+    //     //_playerMover.Jump(m_animator, JUMP_POWER);
+    // }
+    //
+    // public void Attack()
+    // {
+    //
+    // }
 }
