@@ -3,11 +3,11 @@
 public class IncreaceItem : MonoBehaviour, IPickupable {
 
     public GameObject originPlayer;
-    public void PickedUp(UnityChan2DController player)
+    public void PickedUp()
     {
         GetComponent<Collider2D>().enabled = false;
         gameObject.SetActive(false);
-        Invoke("Increace", 0.5f);
+        Invoke( "Increace", 0.5f);
     }
 
     private void Increace()

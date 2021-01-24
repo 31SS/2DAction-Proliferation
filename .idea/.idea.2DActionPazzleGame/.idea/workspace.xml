@@ -11,10 +11,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Player/BlueMan/PlayerParameter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/GameController/GameParameter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Player/BlueMan/BaseCharacter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Interface/IGetableBlueHeart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Block/DamageableBlock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Interface/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Interface/IGetableMaskHeart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Player/MaskMan/MaskManController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Singleton/SingletonMonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Item/Heart/BaseHeart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/PlayerParameter_B.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/GameSystem/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -22,14 +27,32 @@
         <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerParameter_B.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/GameController/GameParameter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/PlayerParameter.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/EnemyData.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/ScriptableCharaController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/Bomb/BombController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BaseCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Interface/ISteponable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Interface/IPickupable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Item/CoinController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Item/IncreaceItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Interface/IDamageable.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/UnityChan2DController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/PlayerParameter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Block/DamageableBlock.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BaseCharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BlueManController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan・RedLady/MaskManController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan・MaskMan/BlueManController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan・MaskMan/MaskManController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BasePlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Interface/IGetableMaskHeart.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Interface/IGetableBlueHeart.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Item/Heart/BaseHeart.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Interface/IBreakeable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Singleton/SingletonMonoBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Item/Heart/BlueHeartController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/GameSystem/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Item/Heart/MaskHeartController.cs" />
       </list>
     </option>
   </component>
@@ -81,7 +104,13 @@
       <workItem from="1610334420236" duration="9679000" />
       <workItem from="1610614982881" duration="607000" />
       <workItem from="1610690050603" duration="3217000" />
-      <workItem from="1610806412976" duration="1720000" />
+      <workItem from="1610806412976" duration="6134000" />
+      <workItem from="1610869512485" duration="2755000" />
+      <workItem from="1610884867576" duration="4664000" />
+      <workItem from="1610954740082" duration="2277000" />
+      <workItem from="1611022834133" duration="4229000" />
+      <workItem from="1611497114353" duration="275000" />
+      <workItem from="1611497408927" duration="6893000" />
     </task>
     <servers />
   </component>
@@ -94,6 +123,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="161" key="#プラグイン" timestamp="1611497420872">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="161" key="#プラグイン/0.0.1920.1040@0.0.1920.1040" timestamp="1611497420872" />
     <state x="953" y="0" width="974" height="1047" key="dock-window-1" timestamp="1610808160154">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

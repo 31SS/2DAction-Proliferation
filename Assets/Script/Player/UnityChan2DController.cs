@@ -106,7 +106,7 @@ public class UnityChan2DController : MonoBehaviour
         var pickupable = other.GetComponent<IPickupable>();
         if (pickupable != null)
         {
-            pickupable.PickedUp(this);
+            // pickupable.PickedUp(this);
         }
     }
 
@@ -139,7 +139,7 @@ public class UnityChan2DController : MonoBehaviour
             {
                 _playerMover.Jump(m_animator, jumpPower);
             }
-            stepedOnable.StepedOn(this);
+            // stepedOnable.StepedOn(this);
         }
     }
 

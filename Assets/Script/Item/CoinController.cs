@@ -5,7 +5,7 @@ public class CoinController : MonoBehaviour , IPickupable
 {
     public AudioClip getCoin;
 
-    public void PickedUp(UnityChan2DController player)
+    public void PickedUp()
     {
         PointController.instance.AddCoin();
         AudioSourceController.instance.PlayOneShot(getCoin);

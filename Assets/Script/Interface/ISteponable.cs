@@ -1,6 +1,5 @@
 ﻿//Playerが踏めるアイテムか判別するインターフェース
-public interface ISteponable 
+public interface ISteponable
 {
-    void StepedOn(UnityChan2DController player);
-    // void StepedOn(int jumpPower)
+    void StepedOn();
 }
