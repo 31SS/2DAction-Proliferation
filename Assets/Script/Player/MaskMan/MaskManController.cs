@@ -34,7 +34,7 @@ public class MaskManController: BasePlayer
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
         _playerInput.Inputting();
         m_isGround = m_rigidbody2D.IsTouching(_groundFilter2D);
@@ -59,5 +59,12 @@ public class MaskManController: BasePlayer
                 StateProcessor.State.Value = StateIdle;
             }
         }
+        base.Update();
+    }
+    
+    protected override void OnTriggerEnter2D(Collider2D other)
+    {
+        base.OnTriggerEnter2D(other);
+        other.GetComponent<IGetableMaskHeart>()?.GotMaskHeart();
     }
 }

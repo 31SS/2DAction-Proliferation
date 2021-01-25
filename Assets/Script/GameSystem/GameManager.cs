@@ -16,13 +16,13 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     public GameState currentState{ get; private set; } = GameState.Opening;
 
     private int stage{ get; set; } = 1;
-    [SerializeField] private GameObject panel;
-    [SerializeField] private Text text;
-    [SerializeField] private GameObject gameClearCanvasPrefab;
-    private GameObject gameClearCanvasClone;
-    [SerializeField] private GameObject gameOverCanvasPrefab;
-    private GameObject gameOverCanvasClone;
-    private Button[] buttons;
+    // [SerializeField] private GameObject panel;
+    // [SerializeField] private Text text;
+    // [SerializeField] private GameObject gameClearCanvasPrefab;
+    // private GameObject gameClearCanvasClone;
+    // [SerializeField] private GameObject gameOverCanvasPrefab;
+    // private GameObject gameOverCanvasClone;
+    // private Button[] buttons;
 
     private void Start()
     {
@@ -90,14 +90,14 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     void GameStart()
     {
-        if (gameOverCanvasClone)
-        {
-            Destroy(gameOverCanvasClone);
-        }
-        else if (gameClearCanvasClone)
-        {
-            Destroy(gameClearCanvasClone);
-        }
+        // if (gameOverCanvasClone)
+        // {
+        //     Destroy(gameOverCanvasClone);
+        // }
+        // else if (gameClearCanvasClone)
+        // {
+        //     Destroy(gameClearCanvasClone);
+        // }
         //Sound.StopBgm();
         // Sound.PlayBgm("Main");
     }
@@ -105,12 +105,12 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     public void GameClear()
     {
         stage++;
-        gameClearCanvasClone = Instantiate(gameClearCanvasPrefab);
+        // gameClearCanvasClone = Instantiate(gameClearCanvasPrefab);
         //後の処理はgameClearCanvasCloneで処理される。
     }
     public void GameOver()
     {
-        gameOverCanvasClone = Instantiate(gameOverCanvasPrefab);
+        // gameOverCanvasClone = Instantiate(gameOverCanvasPrefab);
         //後の処理はgameOverCanvasCloneで処理される。
     }
     //ここからタイトルのボタン

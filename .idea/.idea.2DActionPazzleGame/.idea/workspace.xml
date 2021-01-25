@@ -40,19 +40,20 @@
         <option value="$PROJECT_DIR$/Assets/Script/Block/DamageableBlock.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BaseCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BlueManController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan・RedLady/MaskManController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan・MaskMan/BlueManController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan・MaskMan/MaskManController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BasePlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Interface/IGetableMaskHeart.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Interface/IGetableBlueHeart.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/Heart/BaseHeart.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Interface/IBreakeable.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Singleton/SingletonMonoBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Item/Heart/BlueHeartController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/GameSystem/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/Heart/MaskHeartController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Item/Heart/BlueHeartController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BlueManController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/MaskMan/MaskManController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BasePlayer.cs" />
       </list>
     </option>
   </component>
@@ -111,6 +112,8 @@
       <workItem from="1611022834133" duration="4229000" />
       <workItem from="1611497114353" duration="275000" />
       <workItem from="1611497408927" duration="6893000" />
+      <workItem from="1611546218451" duration="5251000" />
+      <workItem from="1611582400661" duration="3512000" />
     </task>
     <servers />
   </component>
@@ -127,6 +130,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="161" key="#プラグイン/0.0.1920.1040@0.0.1920.1040" timestamp="1611497420872" />
+    <state x="779" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611546887537">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="779" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1611546887537" />
     <state x="953" y="0" width="974" height="1047" key="dock-window-1" timestamp="1610808160154">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

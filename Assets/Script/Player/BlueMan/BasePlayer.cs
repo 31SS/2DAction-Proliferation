@@ -29,14 +29,34 @@ public class BasePlayer : MonoBehaviour
     protected PlayerMover _playerMover;
     [SerializeField] protected Rigidbody2D m_rigidbody2D;
     [SerializeField] protected Animator m_animator;
+    [SerializeField] protected SpriteRenderer m_spriteRenderer;
     [SerializeField] protected bool m_isGround/* { get; set; }*/;
     [SerializeField] protected ContactFilter2D _groundFilter2D;
     [SerializeField] protected ContactFilter2D _stepedOnFilter2D;
     private bool isInvincible;
+    private Vector2 minScreenEdge;
+    private Vector2 maxScreenEdge;
+    private float m_HalfWidth = 0.7f;
+
+    protected void Start()
+    {
+        var cameraMain = Camera.main;
+        minScreenEdge = cameraMain.ViewportToWorldPoint(Vector2.zero);
+        maxScreenEdge = cameraMain.ViewportToWorldPoint(Vector2.one);
+    }
 
     protected void FixedUpdate()
     {
         
+    }
+
+    protected virtual void Update()
+    {
+        var cameraMain = Camera.main;
+        minScreenEdge = cameraMain.ViewportToWorldPoint(Vector2.zero);
+        maxScreenEdge = cameraMain.ViewportToWorldPoint(Vector2.one);
+        var position = transform.position;
+        transform.position = new Vector2(Mathf.Clamp(position.x,minScreenEdge.x + m_HalfWidth,maxScreenEdge.x - m_HalfWidth),Mathf.Clamp(position.y,minScreenEdge.y + m_HalfWidth,maxScreenEdge.y - m_HalfWidth));
     }
 
     protected void OnCollisionEnter2D(Collision2D other)
@@ -62,7 +82,7 @@ public class BasePlayer : MonoBehaviour
     }
     
     //SoilBlockや拾えるアイテムに触れた時の処理
-    private void OnTriggerEnter2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         other.GetComponent<IBreakable>()?.Breaked();
         other.GetComponent<IPickupable>()?.PickedUp();

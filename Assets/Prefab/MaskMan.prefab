@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 3876059329987280793}
   - component: {fileID: 3876059329987280792}
   - component: {fileID: 3876059329987280797}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MaskMan
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +121,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 84fba67c53ff6c24c97eeef15085267b, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -167,12 +167,8 @@ MonoBehaviour:
   playerParameter: {fileID: 11400000, guid: fe34a5196a4803b409d8155cdeee1c21, type: 2}
   m_rigidbody2D: {fileID: 3876059329987280793}
   m_animator: {fileID: 3876059329987280794}
+  m_spriteRenderer: {fileID: 3876059329987280795}
   m_isGround: 0
-  m_boxCollider2D: {fileID: 3876059329987280792}
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 256
-  _spriteRenderer: {fileID: 3876059329987280795}
   _groundFilter2D:
     useTriggers: 0
     useLayerMask: 1
@@ -182,7 +178,7 @@ MonoBehaviour:
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 256
+      m_Bits: 768
     minDepth: 0
     maxDepth: 0
     minNormalAngle: 70

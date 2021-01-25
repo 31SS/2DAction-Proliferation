@@ -18,11 +18,12 @@ public class MaskHeartController : BaseHeart, IGetableMaskHeart
 
     public void GotMaskHeart()
     {
-        if (GameManager.Instance.currentState == GameManager.GameState.Playing_Heart1)
+        if (GameManager.Instance.currentState == GameManager.GameState.Playing_Heart0)
         {
-            GameManager.Instance.dispatch(GameManager.GameState.Clear);
+            GameManager.Instance.dispatch(GameManager.GameState.Playing_Heart1);
             return;
         }
-        GameManager.Instance.dispatch(GameManager.GameState.Playing_Heart1);
+        GameManager.Instance.dispatch(GameManager.GameState.Clear);
+        Destroy(gameObject);
     }
 }
