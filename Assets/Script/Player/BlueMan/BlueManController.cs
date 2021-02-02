@@ -7,17 +7,17 @@ using UniRx;
 
 public class BlueManController : BasePlayer
 {
-    private void Awake()
-    {
-        StateProcessor.State.Value = StateIdle;
-        StateIdle.ExecAction = Idle;
-        StateRun.ExecAction = Run;
-        StateAir.ExecAction = Air;
-        StateAttack.ExecAction = Attack;
-
-        _playerInput = new PlayerInput();
-        _playerMover = new PlayerMover(m_rigidbody2D);
-    }
+    // private void Awake()
+    // {
+    //     StateProcessor.State.Value = StateIdle;
+    //     StateIdle.ExecAction = Idle;
+    //     StateRun.ExecAction = Run;
+    //     StateAir.ExecAction = Air;
+    //     StateAttack.ExecAction = Attack;
+    //
+    //     _playerInput = new PlayerInput();
+    //     _playerMover = new PlayerMover(m_rigidbody2D);
+    // }
 
     private void Start()
     {
@@ -46,7 +46,6 @@ public class BlueManController : BasePlayer
             {
                 _playerMover.Jump(m_animator, playerParameter.JUMP_POWER);
                 StateProcessor.State.Value = StateAir;
-                Debug.Log("Jump");
             }
             else if (Mathf.Abs(_playerInput.X) > 0)
             {

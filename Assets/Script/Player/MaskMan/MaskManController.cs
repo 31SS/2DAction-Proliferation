@@ -7,17 +7,17 @@ using UniRx;
 
 public class MaskManController: BasePlayer
 {
-    private void Awake()
-    {
-        StateProcessor.State.Value = StateIdle;
-        StateIdle.ExecAction = Idle;
-        StateRun.ExecAction = Run;
-        StateAir.ExecAction = Air;
-        StateAttack.ExecAction = Attack;
-
-        _playerInput = new PlayerInput();
-        _playerMover = new PlayerMover(m_rigidbody2D);
-    }
+    // private void Awake()
+    // {
+    //     StateProcessor.State.Value = StateIdle;
+    //     StateIdle.ExecAction = Idle;
+    //     StateRun.ExecAction = Run;
+    //     StateAir.ExecAction = Air;
+    //     StateAttack.ExecAction = Attack;
+    //
+    //     _playerInput = new PlayerInput();
+    //     _playerMover = new PlayerMover(m_rigidbody2D);
+    // }
 
     private void Start()
     {

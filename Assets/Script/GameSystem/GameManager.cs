@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Doozy.Engine;
 
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
@@ -113,6 +114,12 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         // gameOverCanvasClone = Instantiate(gameOverCanvasPrefab);
         //後の処理はgameOverCanvasCloneで処理される。
     }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    
     //ここからタイトルのボタン
     public void StartGame()
     {

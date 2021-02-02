@@ -48,12 +48,18 @@
         <option value="$PROJECT_DIR$/Assets/Script/Item/Heart/BaseHeart.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Interface/IBreakeable.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Singleton/SingletonMonoBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/GameSystem/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/Heart/MaskHeartController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/Heart/BlueHeartController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BlueManController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/AngelRingContoroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/PCharacterState.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/MaskMan/MaskManController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BlueManController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Effect/DamageEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Effect/DamageEffectController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Item/Bomb/BombBlast.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BasePlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Item/SoilBlock.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/GameSystem/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -114,6 +120,16 @@
       <workItem from="1611497408927" duration="6893000" />
       <workItem from="1611546218451" duration="5251000" />
       <workItem from="1611582400661" duration="3512000" />
+      <workItem from="1611737988253" duration="813000" />
+      <workItem from="1611754876253" duration="2981000" />
+      <workItem from="1611824027218" duration="2281000" />
+      <workItem from="1611831307280" duration="6085000" />
+      <workItem from="1611903594799" duration="4911000" />
+      <workItem from="1611969782913" duration="821000" />
+      <workItem from="1611975826513" duration="1645000" />
+      <workItem from="1612173620798" duration="1393000" />
+      <workItem from="1612256127814" duration="2101000" />
+      <workItem from="1612270997444" duration="4520000" />
     </task>
     <servers />
   </component>

@@ -5,11 +5,14 @@ using UnityEngine;
 using CharacterState;
 using Cysharp.Threading.Tasks;
 using UniRx;
+using Unity.Mathematics;
+
 public class BasePlayer : MonoBehaviour
 {
     protected const int REVERSE = -1;
     protected const int NON_REVERSE = 1;
     protected const float KNOCKBACK_POWER = 5f;
+    protected const float ANGELRING_POS = 5f;
 
     //変更前のステート名
     protected string _prevStateName;
@@ -20,6 +23,8 @@ public class BasePlayer : MonoBehaviour
     public CharacterStateRun StateRun { get; set; } = new CharacterStateRun();
     public CharacterStateAir StateAir { get; set; } = new CharacterStateAir();
     public CharacterStateAttack StateAttack { get; set; } = new CharacterStateAttack();
+    
+    public CharacterStateDamage StateDamage { get; set; } = new CharacterStateDamage();
 
 
     [SerializeField] protected PlayerParameter playerParameter;
@@ -33,11 +38,24 @@ public class BasePlayer : MonoBehaviour
     [SerializeField] protected bool m_isGround/* { get; set; }*/;
     [SerializeField] protected ContactFilter2D _groundFilter2D;
     [SerializeField] protected ContactFilter2D _stepedOnFilter2D;
+    [SerializeField] protected GameObject angelRing;
+    [SerializeField] protected GameObject damageEffect;
     private bool isInvincible;
     private Vector2 minScreenEdge;
     private Vector2 maxScreenEdge;
     private float m_HalfWidth = 0.7f;
 
+    private void Awake()
+    {
+        StateProcessor.State.Value = StateIdle;
+        StateIdle.ExecAction = Idle;
+        StateRun.ExecAction = Run;
+        StateAir.ExecAction = Air;
+        StateAttack.ExecAction = Attack;
+
+        _playerInput = new PlayerInput();
+        _playerMover = new PlayerMover(m_rigidbody2D);
+    }
     protected void Start()
     {
         var cameraMain = Camera.main;
@@ -56,7 +74,14 @@ public class BasePlayer : MonoBehaviour
         minScreenEdge = cameraMain.ViewportToWorldPoint(Vector2.zero);
         maxScreenEdge = cameraMain.ViewportToWorldPoint(Vector2.one);
         var position = transform.position;
-        transform.position = new Vector2(Mathf.Clamp(position.x,minScreenEdge.x + m_HalfWidth,maxScreenEdge.x - m_HalfWidth),Mathf.Clamp(position.y,minScreenEdge.y + m_HalfWidth,maxScreenEdge.y - m_HalfWidth));
+        //画面から出ないように
+        transform.position = 
+            new Vector2(Mathf.Clamp(position.x,minScreenEdge.x + m_HalfWidth,maxScreenEdge.x - m_HalfWidth),
+                Mathf.Clamp(position.y,minScreenEdge.y + m_HalfWidth,maxScreenEdge.y - m_HalfWidth));
+        if (GameManager.Instance.currentState == GameManager.GameState.Over)
+        {
+            DamageAct();
+        }
     }
 
     protected void OnCollisionEnter2D(Collision2D other)
@@ -64,20 +89,14 @@ public class BasePlayer : MonoBehaviour
         var stepedOnable = other.gameObject.GetComponent<ISteponable>();
         var damageable = other.gameObject.GetComponent<IDamageable>();
         
-        if (stepedOnable != null)
+        if (stepedOnable != null && m_rigidbody2D.IsTouching(_stepedOnFilter2D))
         {
-            if (m_rigidbody2D.IsTouching(_stepedOnFilter2D))
-            {
-                _playerMover.Jump(m_animator, playerParameter.JUMP_POWER);
+            _playerMover.Jump(m_animator, playerParameter.JUMP_POWER);
                 stepedOnable.StepedOn();
-            }
         }
-
         if (damageable != null)
         {
-            Damage();
-            m_rigidbody2D.AddForce(playerParameter.KNOCKBACK_POWER);
-            // m_rigidbody2D.velocity = new Vector2(transform.right.x * playerParameter.KNOCKBACK_POWER.x, transform.up.y * playerParameter.KNOCKBACK_POWER.y);
+            DamageAct();
         }
     }
     
@@ -86,20 +105,29 @@ public class BasePlayer : MonoBehaviour
     {
         other.GetComponent<IBreakable>()?.Breaked();
         other.GetComponent<IPickupable>()?.PickedUp();
+        var damageable = other.GetComponent<IDamageable>();
+
+        if (damageable != null)
+        {
+            DamageAct();
+        }
     }
 
-    protected async void Damage()
+    private void DamageAct()
     {
-        //無敵中は処理しない
-        if (isInvincible)
+        GameManager.Instance.dispatch(GameManager.GameState.Over);
+        var position = transform.position;
+        var rotation = transform.rotation;
+        // Damage();
+        // m_rigidbody2D.AddForce(playerParameter.KNOCKBACK_POWER);
+        // m_rigidbody2D.velocity = new Vector2(transform.right.x * playerParameter.KNOCKBACK_POWER.x, transform.up.y * playerParameter.KNOCKBACK_POWER.y);
+        // Instantiate(angelRing, transform.position, quaternion.identity);
+        Instantiate(damageEffect, position, rotation);
+        Instantiate(angelRing, position, rotation);
+        if (gameObject != null)
         {
-            return;
+            Destroy(gameObject);
         }
-
-        isInvincible = true;
-        //ノックバック
-        await UniTask.Delay(TimeSpan.FromSeconds(0.5f));
-        isInvincible = false;
     }
     
     public void Idle()
@@ -118,5 +146,10 @@ public class BasePlayer : MonoBehaviour
     public void Attack()
     {
 
+    }
+
+    public void Damage()
+    {
+        
     }
 }

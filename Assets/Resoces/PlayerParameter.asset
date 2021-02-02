@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PLAYER_HP: 1
   RUN_SPEED: 10
-  JUMP_POWER: 1000
+  JUMP_POWER: 1500
   KNOCKBACK_POWER: {x: -1000, y: 1000}

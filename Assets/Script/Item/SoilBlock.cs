@@ -6,7 +6,7 @@ public class SoilBlock : MonoBehaviour, IBreakable
 
     public void Breaked()
     {
-        PointController.instance.AddSoil();
+        // PointController.instance.AddSoil();
         AudioSourceController.instance.PlayOneShot(breakBlock);
         Destroy(gameObject);
     }

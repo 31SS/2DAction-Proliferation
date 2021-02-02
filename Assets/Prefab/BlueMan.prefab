@@ -150,6 +150,10 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 70
     maxNormalAngle: 110
+  angelRing: {fileID: 3282633037005253191, guid: 37ccd391d3070c64da590ee44e8da2bd,
+    type: 3}
+  damageEffect: {fileID: 8398109967018806426, guid: 98b19f0d009e57e47b50d534f1df0170,
+    type: 3}
 --- !u!50 &1957907864569231248
 Rigidbody2D:
   serializedVersion: 4

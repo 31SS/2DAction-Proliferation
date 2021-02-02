@@ -90,4 +90,20 @@ namespace CharacterState
             ExecAction?.Invoke();
         }
     }
+    /// <summary>
+    /// 攻撃している状態
+    /// </summary>
+    public class CharacterStateDamage : CharacterState
+    {
+        public override string GetStateName()
+        {
+            return "State:Damage";
+        }
+
+        // public override void Execute()
+        // {
+        //     Debug.Log("なにか特別な処理をしたいときは派生クラスにて処理をしても良い");
+        //     ExecAction?.Invoke();
+        // }
+    }
 }

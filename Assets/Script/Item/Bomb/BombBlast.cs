@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 //Bombの爆発処理
-public class BombBlast : MonoBehaviour
+public class BombBlast : MonoBehaviour, IDamageable
 {
     private BombAnimation _bombAnimation;
 
@@ -25,5 +25,10 @@ public class BombBlast : MonoBehaviour
             breakableBlock.Breaked();
             
         }
+    }
+
+    public void ApplyDamage()
+    {
+        
     }
 }
