@@ -1,0 +1,11 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DamageableObject : MonoBehaviour, IDamageable
+{
+    public void ApplyDamage()
+    {
+        // throw new System.NotImplementedException();
+    }
+}

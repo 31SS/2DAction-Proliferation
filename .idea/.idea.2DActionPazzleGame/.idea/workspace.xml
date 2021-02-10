@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="17ad5409-bb9e-4398-958e-f75855b07d78" name="Default Changelist" comment="" />
+    <list default="true" id="17ad5409-bb9e-4398-958e-f75855b07d78" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DActionPazzleGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DActionPazzleGame/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DActionPazzleGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DActionPazzleGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy UI/MainGame.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy UI/MainGame.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy UI/Test.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy UI/Test.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Engine/Resources/Data/UIButton/_UIButtonDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Engine/Resources/Data/UIButton/_UIButtonDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Engine/Resources/Data/UIView/UIView_MainGame.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Engine/Resources/Data/UIView/UIView_MainGame.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Traps/Spikes/Idle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Traps/Spikes/Idle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/BlueMan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/BlueMan.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/MaskMan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/MaskMan.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resoces.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resoces/GameParameter.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resoces/GameParameter.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resoces/PlayerParameter.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resoces/PlayerParameter.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/1_PazzleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1_PazzleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/2_PazzleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/2_PazzleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Block.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Block/BlockController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Block/BlockController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Block/BrokenBlockController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Block/BrokenBlockController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Block/DamageableBlock.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Block/DamageableBlock.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GameSystem/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameSystem/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Item/Heart/BlueHeartController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Item/Heart/BlueHeartController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BasePlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BasePlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TileMapPalette/Stage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMapPalette/Stage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,13 +47,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/Interface/IGetableBlueHeart.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Block/DamageableBlock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Interface/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Interface/IGetableMaskHeart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/MaskMan/MaskManController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Singleton/SingletonMonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Item/Heart/BaseHeart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/PlayerParameter_B.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/GameSystem/SceneChangeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/GameSystem/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -37,7 +72,6 @@
         <option value="$PROJECT_DIR$/Assets/Script/Interface/IDamageable.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/UnityChan2DController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/PlayerParameter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Block/DamageableBlock.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BaseCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan・RedLady/MaskManController.cs" />
@@ -49,7 +83,6 @@
         <option value="$PROJECT_DIR$/Assets/Script/Interface/IBreakeable.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Singleton/SingletonMonoBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/Heart/MaskHeartController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Item/Heart/BlueHeartController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/AngelRingContoroller.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/PCharacterState.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/MaskMan/MaskManController.cs" />
@@ -57,9 +90,15 @@
         <option value="$PROJECT_DIR$/Assets/Script/Effect/DamageEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Effect/DamageEffectController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/Bomb/BombBlast.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BasePlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/SoilBlock.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/SceneChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/GameSystem/TimeScaleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/naichilab/FadeManager/Scripts/FadeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/GameSystem/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/GameSystem/SceneChangeManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Block/DamageableBlock.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BasePlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Item/Heart/BlueHeartController.cs" />
       </list>
     </option>
   </component>
@@ -69,6 +108,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -130,6 +170,14 @@
       <workItem from="1612173620798" duration="1393000" />
       <workItem from="1612256127814" duration="2101000" />
       <workItem from="1612270997444" duration="4520000" />
+      <workItem from="1612329894384" duration="2620000" />
+      <workItem from="1612427768981" duration="1190000" />
+      <workItem from="1612487763275" duration="140000" />
+      <workItem from="1612688930056" duration="1228000" />
+      <workItem from="1612765323150" duration="1252000" />
+      <workItem from="1612770338865" duration="4392000" />
+      <workItem from="1612855196803" duration="6393000" />
+      <workItem from="1612880967255" duration="1587000" />
     </task>
     <servers />
   </component>

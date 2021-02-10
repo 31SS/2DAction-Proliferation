@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3876059329987280775}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.23, y: 3.66, z: 0}
-  m_LocalScale: {x: -5.789556, y: 5.789556, z: 5.789556}
+  m_LocalScale: {x: -3.75, y: 3.75, z: 3.75}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -192,11 +192,11 @@ MonoBehaviour:
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 1280
+      m_Bits: 1024
     minDepth: 0
     maxDepth: 0
-    minNormalAngle: 70
-    maxNormalAngle: 110
+    minNormalAngle: 80
+    maxNormalAngle: 100
   angelRing: {fileID: 3282633037005253191, guid: 37ccd391d3070c64da590ee44e8da2bd,
     type: 3}
   damageEffect: {fileID: 8398109967018806426, guid: 98b19f0d009e57e47b50d534f1df0170,

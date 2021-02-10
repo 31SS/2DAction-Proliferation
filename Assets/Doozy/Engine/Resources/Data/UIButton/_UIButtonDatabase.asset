@@ -18,7 +18,11 @@ MonoBehaviour:
   - Example
   - General
   - Test
+  - MainGame
+  - Pause
   Categories:
   - {fileID: 11400000, guid: 40f9e81ff80114a47a3721228ba749ed, type: 2}
   - {fileID: 11400000, guid: dc9c4759a7c324d4f948949bd1d189ab, type: 2}
   - {fileID: 11400000, guid: 22f6efc22f69ce746b615382b2fb1910, type: 2}
+  - {fileID: 11400000, guid: bdc1ab80f6522754ab6149a9c1909b41, type: 2}
+  - {fileID: 11400000, guid: 6481c86ec160a78458aef97bf9bb1eae, type: 2}

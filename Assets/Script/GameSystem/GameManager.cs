@@ -1,10 +1,14 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Doozy.Engine;
+using Doozy.Engine.Nody;
 
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
+    public List<string> eventName;
    public enum GameState
     {
         Opening,
@@ -14,9 +18,12 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         Over
     }
 
-    public GameState currentState{ get; private set; } = GameState.Opening;
-
+    // public GameState currentState{ get; private set; } = GameState.Opening;
+    public GameState currentState{ get; private set; } = GameState.Playing_Heart0;
     private int stage{ get; set; } = 1;
+    private GraphController _graphController;
+
+    private bool pauseFlag = false;
     // [SerializeField] private GameObject panel;
     // [SerializeField] private Text text;
     // [SerializeField] private GameObject gameClearCanvasPrefab;
@@ -51,6 +58,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         // Sound.LoadSe("DragonFire", "DragonFireSE");
         // Sound.LoadSe("EnemyAttack", "EnemyAttackSE");//敵の体当たり
         // dispatch(GameState.Opening);
+        
     }
 
     // 状態による振り分け処理
@@ -81,10 +89,28 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         }
     }
 
+    private void Update()
+    {
+        if (currentState == GameState.Playing_Heart0 || currentState == GameState.Playing_Heart1)
+        {
+            if (Input.GetButtonDown("Retry"))
+            {
+                GameEventMessage.SendEvent(eventName[0]);
+                dispatch(GameState.Playing_Heart0);
+            }
+
+            else if (Input.GetButtonDown("Pause"))
+            {
+                GameEventMessage.SendEvent(eventName[1]);
+            }
+        }
+    }
+
     // オープニング処理
     void GameOpening()
     {
         currentState = GameState.Opening;
+        Time.timeScale = 1f;
         //Sound.StopBgm();
         // Sound.PlayBgm("Title");
     }
@@ -101,6 +127,20 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         // }
         //Sound.StopBgm();
         // Sound.PlayBgm("Main");
+    }
+
+    public void JudgeMove()
+    {
+        if (pauseFlag == false)
+        {
+            Time.timeScale = 0f;
+            pauseFlag = true;
+        }
+        else if (pauseFlag == true)
+        {
+            Time.timeScale = 1f;
+            pauseFlag = false;
+        }
     }
 
     public void GameClear()

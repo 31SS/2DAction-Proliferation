@@ -13,6 +13,7 @@ public class BasePlayer : MonoBehaviour
     protected const int NON_REVERSE = 1;
     protected const float KNOCKBACK_POWER = 5f;
     protected const float ANGELRING_POS = 5f;
+    protected const float LIMIT_Y_VEL = -15f;
 
     //変更前のステート名
     protected string _prevStateName;
@@ -78,6 +79,11 @@ public class BasePlayer : MonoBehaviour
         transform.position = 
             new Vector2(Mathf.Clamp(position.x,minScreenEdge.x + m_HalfWidth,maxScreenEdge.x - m_HalfWidth),
                 Mathf.Clamp(position.y,minScreenEdge.y + m_HalfWidth,maxScreenEdge.y - m_HalfWidth));
+        //落下時のコライダーすり抜け防止のためにY軸の速さに上限を設定
+        if (m_rigidbody2D.velocity.y <= LIMIT_Y_VEL)
+        {
+            m_rigidbody2D.velocity = new Vector2(m_rigidbody2D.velocity.x, LIMIT_Y_VEL);
+        }
         if (GameManager.Instance.currentState == GameManager.GameState.Over)
         {
             DamageAct();
