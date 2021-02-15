@@ -3001,7 +3001,7 @@ MonoBehaviour:
   StartAlpha: 1
   CanvasName: UICanvas 1
   CustomCanvasName: 1
-  DontDestroyCanvasOnLoad: 1
+  DontDestroyCanvasOnLoad: 0
 --- !u!1 &4910122486963513639
 GameObject:
   m_ObjectHideFlags: 0
@@ -5526,7 +5526,7 @@ MonoBehaviour:
   AutoHideAfterShow: 1
   AutoHideAfterShowDelay: 0.8
   AutoSelectButtonAfterShow: 0
-  BehaviorAtStart: 1
+  BehaviorAtStart: 0
   CustomStartAnchoredPosition: {x: 0, y: 0, z: 0}
   DeselectAnyButtonSelectedOnHide: 0
   DeselectAnyButtonSelectedOnShow: 0
@@ -6279,7 +6279,7 @@ MonoBehaviour:
   UpdateShowProgressorOnHide: 0
   UseCustomStartAnchoredPosition: 1
   ViewCategory: MainGame
-  ViewName: Retry
+  ViewName: SceneChange
 --- !u!222 &1878930123066517335
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8772,7 +8772,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 89.5, y: 50.5}
+  m_AnchoredPosition: {x: 9, y: 4}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7854487758359111431

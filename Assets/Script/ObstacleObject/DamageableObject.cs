@@ -6,6 +6,6 @@ public class DamageableObject : MonoBehaviour, IDamageable
 {
     public void ApplyDamage()
     {
-        // throw new System.NotImplementedException();
+        Debug.Log("aaa");
     }
 }

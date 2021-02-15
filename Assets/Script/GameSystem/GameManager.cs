@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Doozy.Engine;
 using Doozy.Engine.Nody;
+using UniRx;
 
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
@@ -153,6 +154,11 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     {
         // gameOverCanvasClone = Instantiate(gameOverCanvasPrefab);
         //後の処理はgameOverCanvasCloneで処理される。
+        Observable.Timer(TimeSpan.FromSeconds(1)).Subscribe(_ =>
+        {
+            GameEventMessage.SendEvent(eventName[0]);
+            dispatch(GameState.Playing_Heart0);
+        });
     }
 
     public void Retry()

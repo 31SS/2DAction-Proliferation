@@ -75,7 +75,7 @@ public class BasePlayer : MonoBehaviour
         minScreenEdge = cameraMain.ViewportToWorldPoint(Vector2.zero);
         maxScreenEdge = cameraMain.ViewportToWorldPoint(Vector2.one);
         var position = transform.position;
-        //画面から出ないように
+        //画面(カメラから見える部分)から出ないように
         transform.position = 
             new Vector2(Mathf.Clamp(position.x,minScreenEdge.x + m_HalfWidth,maxScreenEdge.x - m_HalfWidth),
                 Mathf.Clamp(position.y,minScreenEdge.y + m_HalfWidth,maxScreenEdge.y - m_HalfWidth));
@@ -97,7 +97,7 @@ public class BasePlayer : MonoBehaviour
         
         if (stepedOnable != null && m_rigidbody2D.IsTouching(_stepedOnFilter2D))
         {
-            _playerMover.Jump(m_animator, playerParameter.JUMP_POWER);
+            _playerMover.Jump(m_animator, playerParameter.HIGH_JUMP_POWER);
                 stepedOnable.StepedOn();
         }
         if (damageable != null)
@@ -109,7 +109,7 @@ public class BasePlayer : MonoBehaviour
     //SoilBlockや拾えるアイテムに触れた時の処理
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        other.GetComponent<IBreakable>()?.Breaked();
+        // other.GetComponent<IBreakable>()?.Breaked();
         other.GetComponent<IPickupable>()?.PickedUp();
         var damageable = other.GetComponent<IDamageable>();
 

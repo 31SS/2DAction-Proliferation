@@ -2,40 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17ad5409-bb9e-4398-958e-f75855b07d78" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DActionPazzleGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DActionPazzleGame/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DActionPazzleGame/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DActionPazzleGame/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2DActionPazzleGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DActionPazzleGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Doozy UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Doozy UI/MainGame.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Doozy UI/MainGame.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Doozy UI/Test.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Doozy UI/Test.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animator/Bomb/BlastEffect.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/Bomb/BlastEffect.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/Settings/NodyWindowSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Engine/Resources/Data/UIButton/_UIButtonDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Engine/Resources/Data/UIButton/_UIButtonDatabase.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Doozy/Engine/Resources/Data/UIView/UIView_MainGame.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Engine/Resources/Data/UIView/UIView_MainGame.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Engine/Resources/Data/UIView/_UIViewDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Engine/Resources/Data/UIView/_UIViewDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/PauseController.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/PauseController.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/SceneChangeAnimator.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/SceneChangeAnimator.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Parameter/PlayerParameter.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Parameter/PlayerParameter.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Traps/Spikes/Idle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Traps/Spikes/Idle.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/BlueMan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/BlueMan.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/MaskMan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/MaskMan.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resoces.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resoces/GameParameter.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resoces/GameParameter.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resoces/PlayerParameter.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resoces/PlayerParameter.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/AngelRing.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/AngelRing.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/BlueMan.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/BlueMan.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/BlueManHeart.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/BlueManHeart.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/DamageEffect.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/DamageEffect.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/DoozyObject/Graph - MainGame.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/DoozyObject/Graph - MainGame.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/DoozyObject/Graph Controller - Pause.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/DoozyObject/Graph Controller - Pause.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/DoozyObject/MasterCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/DoozyObject/MasterCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Item/Bomb/Bomb.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Item/Bomb/Bomb.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Item/Bomb/BombBlast.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Item/Bomb/BombBlast.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/MaskMan.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/MaskMan.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/MaskManHeart.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/MaskManHeart.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/1_PazzleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1_PazzleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/2_PazzleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/2_PazzleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Block.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Block/BlockController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Block/BlockController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Block/BrokenBlockController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Block/BrokenBlockController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Block/DamageableBlock.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Block/DamageableBlock.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PreLoadScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PreLoadScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/GameSystem/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameSystem/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Item/Heart/BlueHeartController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Item/Heart/BlueHeartController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Item/Bomb/BombController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Item/Bomb/BombController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Item/Heart/MaskHeartController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Item/Heart/MaskHeartController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/ObstacleObject/DamageableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/ObstacleObject/DamageableObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BasePlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BasePlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TileMapPalette/Stage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMapPalette/Stage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/BlueMan/PlayerParameter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/BlueMan/PlayerParameter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,14 +70,12 @@
         <option value="$PROJECT_DIR$/Assets/Script/GameController/GameParameter.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/EnemyData.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/ScriptableCharaController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Item/Bomb/BombController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Interface/ISteponable.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Interface/IPickupable.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/CoinController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/IncreaceItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Interface/IDamageable.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/UnityChan2DController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/PlayerParameter.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BaseCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan・RedLady/MaskManController.cs" />
@@ -82,7 +86,6 @@
         <option value="$PROJECT_DIR$/Assets/Script/Item/Heart/BaseHeart.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Interface/IBreakeable.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Singleton/SingletonMonoBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Item/Heart/MaskHeartController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/AngelRingContoroller.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/PCharacterState.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/MaskMan/MaskManController.cs" />
@@ -94,11 +97,15 @@
         <option value="$PROJECT_DIR$/Assets/Script/SceneChanger.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/GameSystem/TimeScaleController.cs" />
         <option value="$PROJECT_DIR$/Assets/naichilab/FadeManager/Scripts/FadeManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/GameSystem/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/GameSystem/SceneChangeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Block/DamageableBlock.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BasePlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Item/Heart/BlueHeartController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Item/Heart/MaskHeartController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Item/Bomb/BombController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/PlayerParameter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/BlueMan/BasePlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/ObstacleObject/DamageableObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/GameSystem/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -178,6 +185,11 @@
       <workItem from="1612770338865" duration="4392000" />
       <workItem from="1612855196803" duration="6393000" />
       <workItem from="1612880967255" duration="1587000" />
+      <workItem from="1612936790434" duration="604000" />
+      <workItem from="1613061634604" duration="1349000" />
+      <workItem from="1613312943226" duration="743000" />
+      <workItem from="1613313777756" duration="3380000" />
+      <workItem from="1613377919203" duration="439000" />
     </task>
     <servers />
   </component>

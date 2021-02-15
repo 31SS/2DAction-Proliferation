@@ -36,31 +36,31 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  CurrentGraph: {fileID: 11400000, guid: 846122f2154ea174cac21355afea0226, type: 2}
+  CurrentGraph: {fileID: 11400000, guid: 0096d76570983e84b90897e73ecd0818, type: 2}
   RecentlyOpenedGraphs:
-  - {fileID: 11400000, guid: 846122f2154ea174cac21355afea0226, type: 2}
+  - {fileID: 11400000, guid: 0096d76570983e84b90897e73ecd0818, type: 2}
   - {fileID: 11400000, guid: ed74dc657e8b85545a3ec5f2d0b7ca14, type: 2}
+  - {fileID: 11400000, guid: 846122f2154ea174cac21355afea0226, type: 2}
   - {fileID: 11400000, guid: f6ef06303c12b1e4aa758054bb5a7d7d, type: 2}
   CopiedNodes: []
-  DeletedNodes:
-  - {fileID: 6475753602710588210, guid: 846122f2154ea174cac21355afea0226, type: 2}
+  DeletedNodes: []
   SelectedNodes:
-  - {fileID: -6066252638185840995, guid: 846122f2154ea174cac21355afea0226, type: 2}
+  - {fileID: -9071778386609293515, guid: 0096d76570983e84b90897e73ecd0818, type: 2}
   GraphTabs:
   - IsRootTab: 1
-    Graph: {fileID: 11400000, guid: 846122f2154ea174cac21355afea0226, type: 2}
+    Graph: {fileID: 11400000, guid: 0096d76570983e84b90897e73ecd0818, type: 2}
     SubGraphNode: {fileID: 0}
-    Zoom: 0.6
-    PanOffset: {x: 533.7, y: 243.1}
+    Zoom: 0.8
+    PanOffset: {x: 475.73843, y: 222.44733}
     SelectedNodes: []
     DeletedNodes: []
   CurrentView: 1
-  CurrentPanOffset: {x: 398.4397, y: 312.38565}
+  CurrentPanOffset: {x: 475.73843, y: 222.44733}
   DefaultPanOffset: {x: 0, y: 0}
   IsDirty: 0
   SaveCurrentGraphWithControlS: 1
   CurrentDotAnimationSpeed: 0.6
-  CurrentZoom: 0.7
+  CurrentZoom: 0.8
   DefaultDotAnimationSpeed: 0.6
   DefaultZoom: 1
   ShowNodeNotes: 1

@@ -5,22 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/Start.unity
-    guid: b763c98f277cc420aa68ceb3fc0daf82
-  - enabled: 0
-    path: Assets/Scenes/Practice.unity
-    guid: a9b5a08f4ab82c8488d2cdeb90c5aaae
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/1_PazzleScene.unity
     guid: b175f0a9ddbb95c4584fa4f75eddb44e
   - enabled: 1
-    path: Assets/Scenes/PreLoadScene.unity
-    guid: e133d7a85a694e14f96c04107e956e3e
-  - enabled: 1
-    path: Assets/Scenes/2_PazzleScene.unity
-    guid: 944b1db82ff0f124fa80229480d79d26
+    path: Assets/Scenes/3_PazzleScene.unity
+    guid: 6fbf349146a6687438a49d9f64cf0b9e
   m_configObjects: {}

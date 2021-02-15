@@ -17,5 +17,5 @@ MonoBehaviour:
   Names:
   - Clear
   - Over
-  - Retry
   - Pause
+  - SceneChange

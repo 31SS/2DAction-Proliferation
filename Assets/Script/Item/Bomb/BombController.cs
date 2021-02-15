@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 //Playerに踏まれた際の処理とAnimationの遷移状態によってBombを起爆させる処理
-public class BombController : MonoBehaviour, ISteponable
+public class BombController : MonoBehaviour, ISteponable, IBreakable
 {
     public GameObject bombBlast;
     private BombAnimation _bombAnimation;
@@ -15,6 +15,12 @@ public class BombController : MonoBehaviour, ISteponable
     {
         _bombAnimation.StepedOnFlag();
     }
+    //他のボムの
+    public void Breaked()
+    {
+        _bombAnimation.StepedOnFlag();
+    }
+
     //Flagがtrueの時に爆発処理実行
     private void Update()
     {

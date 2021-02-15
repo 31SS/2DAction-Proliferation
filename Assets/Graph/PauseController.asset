@@ -19,11 +19,11 @@ MonoBehaviour:
     m_connections:
     - m_inputConnectionPoint: {x: -2, y: 4}
       m_outputConnectionPoint: {x: 202, y: 4}
-      m_id: 5f27d131-a810-4dea-870b-fe86e040d380
+      m_id: 3350701c-0844-4e74-b441-550bf9083258
       m_inputNodeId: d0007ebd-f526-4834-baec-2ef726e0a159
       m_inputSocketId: 16c55653-63d6-43e7-abb3-65508b0ef64d
-      m_outputNodeId: b7e3226f-dd7f-4e4f-8631-8440a889996e
-      m_outputSocketId: 5bd8639c-d074-4c9a-8247-16192ac4cdac
+      m_outputNodeId: a5d96bde-6168-4cd7-9e88-ab838147f92f
+      m_outputSocketId: 243fd01c-6e9b-4982-981f-e746958202a1
     m_connectionPoints:
     - {x: -2, y: 4}
     - {x: 202, y: 4}
@@ -71,13 +71,13 @@ MonoBehaviour:
   m_useUpdate: 0
   m_height: 156
   m_width: 216
-  m_x: 1152
+  m_x: 816
   m_y: 72
   m_minimumInputSocketsCount: 1
   m_minimumOutputSocketsCount: 1
   m_graphId: 23d87d38-1fe4-45c0-ba26-984fcd5c296c
   m_id: d0007ebd-f526-4834-baec-2ef726e0a159
-  m_name: To Title Send Game Events
+  m_name: ToTitleEvent
   m_notes: 
   ErrorNotSendingAnyGameEvent: 0
   GameEvent: ToTitleEvent
@@ -160,9 +160,9 @@ MonoBehaviour:
     m_connections:
     - m_inputConnectionPoint: {x: -2, y: 4}
       m_outputConnectionPoint: {x: 202, y: 4}
-      m_id: fd43e269-405a-4308-9a0d-701380d2b3de
-      m_inputNodeId: b7e3226f-dd7f-4e4f-8631-8440a889996e
-      m_inputSocketId: 84aa2914-47d5-4bff-92b9-d65234b28d41
+      m_id: 3350701c-0844-4e74-b441-550bf9083258
+      m_inputNodeId: d0007ebd-f526-4834-baec-2ef726e0a159
+      m_inputSocketId: 16c55653-63d6-43e7-abb3-65508b0ef64d
       m_outputNodeId: a5d96bde-6168-4cd7-9e88-ab838147f92f
       m_outputSocketId: 243fd01c-6e9b-4982-981f-e746958202a1
     m_connectionPoints:
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_minimumOutputSocketsCount: 1
   m_graphId: 23d87d38-1fe4-45c0-ba26-984fcd5c296c
   m_id: 06f7b3e1-c4ab-4511-bac2-59b350429bd8
-  m_name: PauseTimeScale
+  m_name: TimeScale_0
   m_notes: 
   TargetValue: 0
   AnimateValue: 0
@@ -454,7 +454,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DebugMode: 0
   m_nodes:
-  - {fileID: 4598953105647828000}
   - {fileID: -513549501424281765}
   - {fileID: 7457752448829294867}
   - {fileID: -6379258450891650938}
@@ -468,98 +467,7 @@ MonoBehaviour:
   m_version: 1
   m_description: 
   m_id: 23d87d38-1fe4-45c0-ba26-984fcd5c296c
-  m_lastModified: 132573289586537753
---- !u!114 &4598953105647828000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bd5abe2bf3947e29618205a5d533d57, type: 3}
-  m_Name: TimeScaleNode
-  m_EditorClassIdentifier: 
-  ErrorNodeNameIsEmpty: 0
-  ErrorDuplicateNameFoundInGraph: 0
-  m_inputSockets:
-  - m_connectionMode: 1
-    m_connections:
-    - m_inputConnectionPoint: {x: -2, y: 4}
-      m_outputConnectionPoint: {x: 202, y: 4}
-      m_id: fd43e269-405a-4308-9a0d-701380d2b3de
-      m_inputNodeId: b7e3226f-dd7f-4e4f-8631-8440a889996e
-      m_inputSocketId: 84aa2914-47d5-4bff-92b9-d65234b28d41
-      m_outputNodeId: a5d96bde-6168-4cd7-9e88-ab838147f92f
-      m_outputSocketId: 243fd01c-6e9b-4982-981f-e746958202a1
-    m_connectionPoints:
-    - {x: -2, y: 4}
-    - {x: 202, y: 4}
-    m_direction: 0
-    m_canBeDeleted: 0
-    m_canBeReordered: 0
-    m_curveModifier: 0
-    m_height: 24
-    m_width: 216
-    m_x: 0
-    m_y: 38
-    m_id: 84aa2914-47d5-4bff-92b9-d65234b28d41
-    m_nodeId: b7e3226f-dd7f-4e4f-8631-8440a889996e
-    m_socketName: InputSocket_0
-    m_value: '{}'
-    m_valueTypeQualifiedName: Doozy.Engine.Nody.Connections.PassthroughConnection,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_outputSockets:
-  - m_connectionMode: 0
-    m_connections:
-    - m_inputConnectionPoint: {x: -2, y: 4}
-      m_outputConnectionPoint: {x: 202, y: 4}
-      m_id: 5f27d131-a810-4dea-870b-fe86e040d380
-      m_inputNodeId: d0007ebd-f526-4834-baec-2ef726e0a159
-      m_inputSocketId: 16c55653-63d6-43e7-abb3-65508b0ef64d
-      m_outputNodeId: b7e3226f-dd7f-4e4f-8631-8440a889996e
-      m_outputSocketId: 5bd8639c-d074-4c9a-8247-16192ac4cdac
-    m_connectionPoints:
-    - {x: -2, y: 4}
-    - {x: 202, y: 4}
-    m_direction: 1
-    m_canBeDeleted: 0
-    m_canBeReordered: 0
-    m_curveModifier: 0
-    m_height: 24
-    m_width: 216
-    m_x: 0
-    m_y: 62
-    m_id: 5bd8639c-d074-4c9a-8247-16192ac4cdac
-    m_nodeId: b7e3226f-dd7f-4e4f-8631-8440a889996e
-    m_socketName: OutputSocket_0
-    m_value: '{}'
-    m_valueTypeQualifiedName: Doozy.Engine.Nody.Connections.PassthroughConnection,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_nodeType: 4
-  m_allowDuplicateNodeName: 1
-  m_allowEmptyNodeName: 0
-  m_canBeDeleted: 1
-  m_debugMode: 0
-  m_useFixedUpdate: 0
-  m_useLateUpdate: 0
-  m_useUpdate: 0
-  m_height: 174
-  m_width: 216
-  m_x: 852
-  m_y: 132
-  m_minimumInputSocketsCount: 1
-  m_minimumOutputSocketsCount: 1
-  m_graphId: 23d87d38-1fe4-45c0-ba26-984fcd5c296c
-  m_id: b7e3226f-dd7f-4e4f-8631-8440a889996e
-  m_name: RestoreTimeScale2
-  m_notes: 
-  TargetValue: 1
-  AnimateValue: 0
-  AnimationDuration: 1
-  AnimationEase: 1
-  WaitForAnimationToFinish: 0
+  m_lastModified: 132578462692533388
 --- !u!114 &6324017546354083353
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -871,7 +779,7 @@ MonoBehaviour:
   m_minimumOutputSocketsCount: 1
   m_graphId: 23d87d38-1fe4-45c0-ba26-984fcd5c296c
   m_id: 52987203-515e-4a30-af93-d49f2421226d
-  m_name: RestoreTimeScale1
+  m_name: TimeScale_1
   m_notes: 
   TargetValue: 1
   AnimateValue: 0

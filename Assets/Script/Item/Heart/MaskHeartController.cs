@@ -21,6 +21,7 @@ public class MaskHeartController : BaseHeart, IGetableMaskHeart
         if (GameManager.Instance.currentState == GameManager.GameState.Playing_Heart0)
         {
             GameManager.Instance.dispatch(GameManager.GameState.Playing_Heart1);
+            Destroy(gameObject);
             return;
         }
         GameManager.Instance.dispatch(GameManager.GameState.Clear);
